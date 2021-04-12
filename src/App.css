@@ -1,0 +1,8 @@
+body,
+html {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: radial-gradient(#090979, #00d4ff);
+}

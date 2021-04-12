@@ -1,21 +1,31 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-const user = ({ user }) => {
+import { Container, Row, Col, Image } from "react-bootstrap";
+import "./User.css";
+
+const User = ({ user }) => {
     return (
         <div>
-            <Container>
+            <Container className="image">
                 <Row>
-                    <Col xs={6} md={4}>
-                        <Image src="holder.js/171x180" roundedCircle />
+                    <Col>
+                        <Image
+                            src="https://dental-smile.net/public/uploads/profile_png_1113533201904221555971977765.png"
+                            roundedCircle
+                        />
                     </Col>
                 </Row>
             </Container>
-            <h1>Username: {user.username}</h1>
-            <p>Full name: {user.name}</p> <br />
-            <p>Address: {user.address}</p> <br />
-            <p>Email: {user.email}</p> <br />
+            <Container style={{ color: "white" }}>
+                <h4> {user.username}</h4>
+                <br />
+                <span>Fullname: {user.name}</span>
+                <br />
+                <span>Address: {user.address.street}</span>
+                <br />
+                <span>Email: {user.email}</span>
+            </Container>
         </div>
     );
 };
 
-export default user;
+export default User;
